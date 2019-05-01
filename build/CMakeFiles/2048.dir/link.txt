@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/2048.dir/2048.cpp.o  -o 2048 

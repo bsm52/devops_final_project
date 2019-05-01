@@ -1,0 +1,4 @@
+/home/brandon/Desktop/2048/build/CMakeFiles/rebuild_cache.dir
+/home/brandon/Desktop/2048/build/CMakeFiles/edit_cache.dir
+/home/brandon/Desktop/2048/build/CMakeFiles/2048.dir
+/home/brandon/Desktop/2048/build/CMakeFiles/2048_t.dir
