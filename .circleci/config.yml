@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Install git
-          command: apt-get install git
+          command: apt install git
 
       - run:
           name: Print the Current Time
