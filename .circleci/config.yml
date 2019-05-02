@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Install git
-          command: apt install git
+          command: git clone https://github.com/bsm52/devops_final_project.git
 
       - run:
           name: Print the Current Time
