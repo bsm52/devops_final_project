@@ -7,7 +7,9 @@ jobs:
     steps:
       - checkout
 
-      - run: apt-get update && apt-get install -y git
+      - run: 
+          name: Update and install git
+          command: apt-get update && apt-get install -y git
 
       - run:
           name: Print the Current Time
