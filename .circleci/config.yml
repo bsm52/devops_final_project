@@ -8,8 +8,8 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Install git
+          command: sudo apt-get install git
 
       - run:
           name: Print the Current Time
