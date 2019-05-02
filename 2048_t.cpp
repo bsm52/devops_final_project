@@ -7,6 +7,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <stdlib.h>
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -302,49 +304,62 @@ void move_down(){
 }
 
 int main(){
-    srand((unsigned)time(NULL));
-    char ch, c;
-    char arr[4] = {'a', 's', 'd', 'w'};
-    int question = 0;
-    //initialize board
-    display();
-    while(1){
-        if(is_win() && !question){
-            question = !question;
-            cout<<step<<" steps"<<endl;
-            cout<<"!!!YOU WIN!!!"<<endl;
-            cout<<"Continue? (y/n)"<<endl;
-            cin>>c;
-            if(c=='n')
-                exit(1);
-        }
-        if(game_over()){
-            cout<<"~~~GAME OVER~~~"<<endl;
-            exit(2);
-        }
-        ch = arr[rand() % 4];
-        cout << "this is ch " << ch << endl;
-        switch (ch) {
-            case 'w':
-                move_up();
-                break;
-            case 's':
-                move_down();
-                break;
-            case 'a':
-                move_left();
-                break;
-            case 'd':
-                move_right();
-                break;
-            case 'q':
-                exit(1);
-            default:
-                break;
-        }
-        //show current scores
-        cout<<"score: "<<score<<endl;
+    int wins = 0, gamesPlayed = 0, highscore = 0;
+    for(int i = 0; i < 100000; i++)
+    {
+        score = 0;
+        step = 0;
+        srand((unsigned)time(NULL));
+        char ch, c;
+        char arr[4] = {'a', 's', 'd', 'w'};
+        int question = 0;
+        bool contin = true;
+        //initialize board
+        display();
+        while(contin == 1){
+            if(is_win() && !question){
+                question = !question;
+                cout<<step<<" steps"<<endl;
+                cout<<"!!!YOU WIN!!!"<<endl;
+                cout<<"Continue? (y/n)"<<endl;
+                wins++;
+                gamesPlayed++;
+                contin = false;
+            }
+            if(game_over()){
+                cout<<"~~~GAME OVER~~~"<<endl;
+                gamesPlayed++;
+                contin = false;
+            }
+            ch = arr[rand() % 4];
+            cout << "this is ch " << ch << endl;
+            switch (ch) {
+                case 'w':
+                    move_up();
+                    break;
+                case 's':
+                    move_down();
+                    break;
+                case 'a':
+                    move_left();
+                    break;
+                case 'd':
+                    move_right();
+                    break;
+                case 'q':
+                    exit(1);
+                default:
+                    break;
+            }
+            //show current scores
+            cout<<"score: "<<score<<endl;
+            highscore = max(score, highscore);
+        } 
     }
+    ofstream output;
+    output.open("wins.txt");
+    output << "The number of wins :" << wins << "\nGames Played: " << gamesPlayed << "\nHighest Score Achieved " << highscore;
+    
     return 0;
 }
 
