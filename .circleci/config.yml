@@ -13,9 +13,9 @@ jobs:
 
       - run: 
           name: git clone project
-          command: git clone https://github.com/bsm52/devops_final_project.git \
-                   cd devops_final_project \
-                   ls
+          command: git clone https://github.com/bsm52/devops_final_project.git
+          command: cd devops_final_project \
+          command: ls
 
       - run:
           name: Print the Current Time
