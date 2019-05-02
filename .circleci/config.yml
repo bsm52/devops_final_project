@@ -15,7 +15,7 @@ jobs:
           name: git clone project
           command: |
             git clone https://github.com/bsm52/devops_final_project.git
-            cd devops_final_project \
+            cd devops_final_project
             ls
 
       - run:
