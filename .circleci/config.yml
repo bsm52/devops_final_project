@@ -9,7 +9,7 @@ jobs:
 
       - run: 
           name: Update and install git, cmake
-          command: apt-get update && apt-get install -y git && apt-get install cmake
+          command: apt-get update && apt-get install -y git && apt-get install -y cmake
 
       - run: 
           name: git clone project and make build directory
