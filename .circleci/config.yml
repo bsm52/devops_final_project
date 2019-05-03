@@ -14,6 +14,7 @@ jobs:
       - run: 
           name: git clone project and make build directory
           command: |
+            cd Desktop
             git clone https://github.com/bsm52/devops_final_project.git
             cd devops_final_project
             mkdir build
