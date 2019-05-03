@@ -180,7 +180,7 @@ void move_left(){
         add_element();
         step++;
     }
-    //display();
+    display();
 }
 
 void move_right(){
@@ -220,7 +220,7 @@ void move_right(){
         add_element();
         step++;
     }
-    //display();
+    display();
 }
 
 void move_up(){
@@ -260,7 +260,7 @@ void move_up(){
         add_element();
         step++;
     }
-    //display();
+    display();
 }
 
 void move_down(){
@@ -300,7 +300,7 @@ void move_down(){
         add_element();
         step++;
     }
-    //display();
+    display();
 }
 
 int main(){
@@ -315,7 +315,7 @@ int main(){
         int question = 0;
         bool contin = true;
         //initialize board
-        //display();
+        display();
         while(contin == 1){
             if(is_win() && !question){
                 question = !question;
