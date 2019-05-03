@@ -23,10 +23,17 @@ jobs:
             make
 
       - run:
-          name: run test and check results
+          name: run test
           command: |
             cd build
             ./2048_t
-            printf "%s" "$(<wins.txt)"
+
+      - run:
+          name: show results
+          command: |
+            cd build
+            cat wins.txt
+
+
 
     
