@@ -8,8 +8,8 @@ jobs:
       - checkout
 
       - run: 
-          name: Update and install git
-          command: apt-get update && apt-get install -y git
+          name: Update and install git, cmake
+          command: apt-get update && apt-get install -y git && apt-get install cmake
 
       - run: 
           name: git clone project and make build directory
