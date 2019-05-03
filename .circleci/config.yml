@@ -9,20 +9,17 @@ jobs:
 
       - run: 
           name: Update and install git, cmake
-          command: apt-get update && apt-get install -y git && apt-get install -y cmake && ls
+          command: apt-get update && apt-get install -y cmake 
 
       - run: 
-          name: git clone project and make build directory
+          name: make build dir
+          command: mkdir build
+
+      - run:
+          name: cmake and make
           command: |
-            git clone https://github.com/bsm52/devops_final_project.git
-            cd devops_final_project
-            mkdir build
             cd build
+            cmake ..
+            make
 
-      - run:
-          name: cmake
-          command: ls
-
-      - run:
-          name: make
-          command: make
+    
