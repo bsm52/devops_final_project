@@ -22,4 +22,11 @@ jobs:
             cmake ..
             make
 
+      - run:
+          name: run test and check results
+          command: |
+            cd build
+            ./2048_t
+            vim wins.txt
+
     
