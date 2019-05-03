@@ -21,7 +21,7 @@ jobs:
 
       - run:
           name: cmake
-          command: cmake ..
+          command: ls
 
       - run:
           name: make
