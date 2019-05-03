@@ -305,7 +305,7 @@ void move_down(){
 
 int main(){
     int wins = 0, gamesPlayed = 0, highscore = 0;
-    for(int i = 0; i < 100000; i++)
+    for(int i = 0; i < 1000; i++)
     {
         score = 0;
         step = 0;
