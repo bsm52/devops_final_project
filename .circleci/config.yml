@@ -12,7 +12,7 @@ jobs:
           command: apt-get update && apt-get install -y git
 
       - run: 
-          name: git clone project
+          name: git clone project and make build directory
           command: |
             git clone https://github.com/bsm52/devops_final_project.git
             cd devops_final_project
@@ -20,5 +20,9 @@ jobs:
             cd build
 
       - run:
-          name: Print the Current Time
-          command: date
+          name: cmake
+          command: cmake ..
+
+      - run:
+          name: make
+          command: make
