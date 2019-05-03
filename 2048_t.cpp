@@ -327,12 +327,12 @@ int main(){
                 contin = false;
             }
             if(game_over()){
-                cout<<"~~~GAME OVER~~~"<<endl;
+               // cout<<"~~~GAME OVER~~~"<<endl;
                 gamesPlayed++;
                 contin = false;
             }
             ch = arr[rand() % 4];
-            cout << "this is ch " << ch << endl;
+            //cout << "this is ch " << ch << endl;
             switch (ch) {
                 case 'w':
                     move_up();
@@ -352,7 +352,7 @@ int main(){
                     break;
             }
             //show current scores
-            cout<<"score: "<<score<<endl;
+            //cout<<"score: "<<score<<endl;
             highscore = max(score, highscore);
         } 
     }
