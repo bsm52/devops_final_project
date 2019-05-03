@@ -27,6 +27,6 @@ jobs:
           command: |
             cd build
             ./2048_t
-            vim wins.txt
+            cat wins.txt
 
     
