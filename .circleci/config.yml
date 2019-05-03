@@ -27,6 +27,6 @@ jobs:
           command: |
             cd build
             ./2048_t
-            cat wins.txt
+            printf "%s" "$(<wins.txt)"
 
     
