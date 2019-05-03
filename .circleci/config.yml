@@ -11,6 +11,14 @@ jobs:
           name: Update and install git
           command: apt-get update && apt-get install -y git
 
+      - run: 
+          name: git clone project
+          command: |
+            git clone https://github.com/bsm52/devops_final_project.git
+            cd devops_final_project
+            mkdir build
+            cd build
+
       - run:
           name: Print the Current Time
           command: date

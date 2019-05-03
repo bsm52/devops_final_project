@@ -1,0 +1,3 @@
+The number of wins :0
+Games Played: 100000
+Highest Score Achieved 2412
