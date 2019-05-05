@@ -6,17 +6,19 @@ LABEL edu.uanet.grb23-devops.url=“https://github.com/bsm52/devops_final_projec
 
 # Update and install dependencies
 RUN apt-get update -y && apt-get install -y \
-    make \
+    cmake \
     g++ \
     git
 
-ARG 2048_URL='https://github.com/bsm52/devops_final_project.git'
+ARG GAME_URL='https://github.com/bsm52/devops_final_project.git'
 
-# Download twitter-project source
-RUN git clone $2048_URL
+# Download 2048 game source
+RUN git clone $GAME_URL
 
 WORKDIR devops_final_project
 RUN mkdir /build
 WORKDIR build
 
-RUN cmake make 2048_t
+RUN cmake ..
+RUN make
+RUN ctest
