@@ -1,0 +1,11 @@
+version: '3.4'
+#Ubuntu
+ ubuntu_18.04:
+  build: ./ubuntu
+  command: bash -c 'cmake .. | make | ctest | cat wins.txt'
+
+#Centos
+services:
+ centos:
+  build: ./centos
+  command: bash -c 'cmake .. | make | ctest | cat wins.txt'

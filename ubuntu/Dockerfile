@@ -18,6 +18,3 @@ RUN git clone $GAME_URL
 WORKDIR devops_final_project
 RUN mkdir /build
 WORKDIR build
-
-RUN cmake ..
-RUN make && ctest && cat wins.txt
