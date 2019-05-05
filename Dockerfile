@@ -20,5 +20,4 @@ RUN mkdir /build
 WORKDIR build
 
 RUN cmake ..
-RUN make
-RUN ctest
+RUN make ctest && cat wins.txt
